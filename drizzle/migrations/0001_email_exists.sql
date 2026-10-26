@@ -1,0 +1,6 @@
+CREATE OR REPLACE FUNCTION public.email_exists(_email text)
+RETURNS boolean LANGUAGE sql STABLE SECURITY DEFINER SET search_path = public, auth AS $$
+  SELECT EXISTS (SELECT 1 FROM auth.users WHERE lower(email) = lower(trim(_email)))
+$$;
+REVOKE ALL ON FUNCTION public.email_exists(text) FROM public;
+GRANT EXECUTE ON FUNCTION public.email_exists(text) TO anon, authenticated;
