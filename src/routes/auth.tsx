@@ -60,7 +60,7 @@ function AuthPage() {
   return (
     <div className="grid min-h-screen place-items-center p-4">
       <div className="w-full max-w-sm space-y-4 rounded-2xl border bg-card p-6">
-        <Link to="/" className="text-xl font-extrabold">ThreadPixel Marketplace</Link>
+        <Link to="/" search={{}} className="text-xl font-extrabold">ThreadPixel Marketplace</Link>
         <h1 className="text-2xl font-bold">{mode === "signup" ? "Create account" : "Welcome back"}</h1>
         <form onSubmit={submit} noValidate className="space-y-3">
           <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full rounded-lg bg-muted px-3 py-2.5 outline-none" />
@@ -81,7 +81,7 @@ function AuthPage() {
           {mode === "signup" ? "Have an account? " : "New here? "}
           <Link to="/auth" search={{ mode: mode === "signup" ? "login" : "signup" }} className="font-semibold text-primary">{mode === "signup" ? "Login" : "Sign up"}</Link>
         </p>
-        <Link to="/" className="block text-sm text-muted-foreground">← Continue as guest</Link>
+        <Link to="/" search={{}} className="block text-sm text-muted-foreground">← Continue as guest</Link>
       </div>
     </div>
   );
