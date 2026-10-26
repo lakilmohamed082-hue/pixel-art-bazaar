@@ -9,10 +9,10 @@ export const Route = createFileRoute("/auth")({
   validateSearch: (s: Record<string, unknown>): Search => ({ mode: s["mode"] === "signup" ? "signup" : "login" }),
   head: () => ({
     meta: [
-      { title: "Login or Sign up — Mart.Designs" },
-      { name: "description", content: "Sign in to Mart.Designs as a buyer or seller." },
-      { property: "og:title", content: "Login — Mart.Designs" },
-      { property: "og:description", content: "Sign in to Mart.Designs as a buyer or seller." },
+      { title: "Login or Sign up — ThreadPixel Marketplace" },
+      { name: "description", content: "Sign in to ThreadPixel Marketplace as a buyer or seller." },
+      { property: "og:title", content: "Login — ThreadPixel Marketplace" },
+      { property: "og:description", content: "Sign in to ThreadPixel Marketplace as a buyer or seller." },
     ],
   }),
   component: AuthPage,
@@ -53,7 +53,7 @@ function AuthPage() {
   return (
     <div className="grid min-h-screen place-items-center p-4">
       <div className="w-full max-w-sm space-y-4 rounded-2xl border bg-card p-6">
-        <Link to="/" className="text-xl font-extrabold">Mart.Designs</Link>
+        <Link to="/" className="text-xl font-extrabold">ThreadPixel Marketplace</Link>
         <h1 className="text-2xl font-bold">{mode === "signup" ? "Create account" : "Welcome back"}</h1>
         <form onSubmit={submit} className="space-y-3">
           <input required type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full rounded-lg bg-muted px-3 py-2.5 outline-none" />

@@ -14,10 +14,10 @@ export const Route = createFileRoute("/product/$id")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: loaderData ? `${loaderData.name} T-shirt — Mart.Designs` : "Product — Mart.Designs" },
-      { name: "description", content: "AI-upscaled logo T-shirt. Sizes S to XL. Pay with PayPal or order via WhatsApp." },
-      { property: "og:title", content: loaderData ? `${loaderData.name} T-shirt` : "Mart.Designs product" },
-      { property: "og:description", content: "AI-upscaled logo T-shirt from Mart.Designs." },
+      { title: loaderData ? `${loaderData.name} T-shirt — ThreadPixel Marketplace` : "Product — ThreadPixel Marketplace" },
+      { name: "description", content: "Logo T-shirt. Sizes S to XL. Pay with PayPal or order via WhatsApp." },
+      { property: "og:title", content: loaderData ? `${loaderData.name} T-shirt` : "ThreadPixel Marketplace product" },
+      { property: "og:description", content: "AI-upscaled logo T-shirt from ThreadPixel Marketplace." },
     ],
   }),
   component: ProductPage,
