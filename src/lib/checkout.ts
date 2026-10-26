@@ -21,6 +21,6 @@ export function paypalUrl(lines: CartLine[], returnUrl?: string) {
 
 export function whatsappUrl(lines: CartLine[], wa: string) {
   const body = lines.map((l) => `• ${l.name} T-shirt — Size ${l.size} × ${l.qty} = $${(l.price * l.qty).toFixed(2)}`).join("\n");
-  const text = `Hello Mart.Designs! I want to order:\n${body}\nTotal: $${cartTotal(lines).toFixed(2)}`;
+  const text = `Hello ThreadPixel Marketplace! I want to order:\n${body}\nTotal: $${cartTotal(lines).toFixed(2)}`;
   return `https://wa.me/${wa}?text=${encodeURIComponent(text)}`;
 }

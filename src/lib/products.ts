@@ -7,17 +7,17 @@ import leaf from "@/assets/leaf.jpg";
 import crown from "@/assets/crown.jpg";
 import bolt from "@/assets/bolt.jpg";
 
-export type Product = { id: string; name: string; by: string; price: number; img: string };
+export type Product = { id: string; name: string; by: string; price: number; img: string; category: string };
 
 export const products: Product[] = [
-  { id: "alpine-vibes", name: "Alpine Vibes", by: "Neon Thread Co.", price: 24, img: alpine },
-  { id: "foxline", name: "Foxline", by: "Pixel & Stitch", price: 32, img: foxline },
-  { id: "sunset", name: "Sunset", by: "RetroInk Studio", price: 22, img: sunset },
-  { id: "cyber-skull", name: "Cyber Skull", by: "Neon Thread Co.", price: 34, img: skull },
-  { id: "ocean-wave", name: "Ocean Wave", by: "Pixel & Stitch", price: 26, img: wave },
-  { id: "evergreen-leaf", name: "Evergreen Leaf", by: "RetroInk Studio", price: 23, img: leaf },
-  { id: "royal-crown", name: "Royal Crown", by: "Neon Thread Co.", price: 29, img: crown },
-  { id: "red-bolt", name: "Red Bolt", by: "Pixel & Stitch", price: 25, img: bolt },
+  { id: "alpine-vibes", name: "Alpine Vibes", by: "Neon Thread Co.", price: 24, img: alpine, category: "T-shirt" },
+  { id: "foxline", name: "Foxline", by: "Pixel & Stitch", price: 32, img: foxline, category: "T-shirt" },
+  { id: "sunset", name: "Sunset", by: "RetroInk Studio", price: 22, img: sunset, category: "T-shirt" },
+  { id: "cyber-skull", name: "Cyber Skull", by: "Neon Thread Co.", price: 34, img: skull, category: "T-shirt" },
+  { id: "ocean-wave", name: "Ocean Wave", by: "Pixel & Stitch", price: 26, img: wave, category: "T-shirt" },
+  { id: "evergreen-leaf", name: "Evergreen Leaf", by: "RetroInk Studio", price: 23, img: leaf, category: "T-shirt" },
+  { id: "royal-crown", name: "Royal Crown", by: "Neon Thread Co.", price: 29, img: crown, category: "T-shirt" },
+  { id: "red-bolt", name: "Red Bolt", by: "Pixel & Stitch", price: 25, img: bolt, category: "T-shirt" },
 ];
 
 export const SIZES = ["S", "M", "L", "XL"] as const;
