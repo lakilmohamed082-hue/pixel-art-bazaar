@@ -4,7 +4,7 @@ import { products } from "@/lib/products";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useStore } from "@/lib/store";
 
-type Search = { q?: string };
+type Search = { q?: string | undefined };
 
 export const Route = createFileRoute("/")({
   validateSearch: (s: Record<string, unknown>): Search => ({
